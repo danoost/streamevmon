@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>streamevmon v0.1.0 - nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction</title>
-          <meta name="description" content="streamevmon v0.1.0 - nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction" />
-          <meta name="keywords" content="streamevmon v0.1.0 nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction" />
+          <title>streamevmon v0.1.0 - nz.net.wand.streamevmon.flink.sinks.InfluxEventSink</title>
+          <meta name="description" content="streamevmon v0.1.0 - nz.net.wand.streamevmon.flink.sinks.InfluxEventSink" />
+          <meta name="keywords" content="streamevmon v0.1.0 nz.net.wand.streamevmon.flink.sinks.InfluxEventSink" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -153,10 +153,10 @@ directly related to Flink usage.</p><div class="fullcomment"><div class="comment
 directly related to Flink usage.</p><p>Despite being implemented as ProcessFunctions, detectors should be placed
 in a corresponding subpackage within <a href="../../detectors/index.html" class="extype" name="nz.net.wand.streamevmon.detectors"><code>detectors</code></a>.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="nz.net.wand.streamevmon">streamevmon</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sources"></a><a id="sources:sources"></a>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sinks"></a><a id="sinks:sinks"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/index.html" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -165,55 +165,25 @@ in a corresponding subpackage within <a href="../../detectors/index.html" class=
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="Sources are the beginning of a Flink pipeline." href="index.html"><span class="name">sources</span></a>
+        <a title="Sinks are the end of a Flink pipeline." href="index.html"><span class="name">sinks</span></a>
       </span>
       
-      <p class="shortcomment cmt">Sources are the beginning of a Flink pipeline.</p><div class="fullcomment"><div class="comment cmt"><p>Sources are the beginning of a Flink pipeline. In our case, they produce
-Measurements to be passed to detectors. Measurements are obtained from
-outside this program.</p><p>Sources can take two forms: SourceFunction and FileInputFormat.
-SourceFunctions allow gathering data with arbitrary methods, while a
-FileInputFormat is specifically for reading files, usually from disk.
+      <p class="shortcomment cmt">Sinks are the end of a Flink pipeline.</p><div class="fullcomment"><div class="comment cmt"><p>Sinks are the end of a Flink pipeline. In our case, they usually receive
+input (events) from detectors, and put them somewhere outside this program,
+such as InfluxDB or a file.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="nz.net.wand.streamevmon.flink">flink</a></dd></dl></div>
     </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="class" href="" title="Produces InfluxMeasurement values from InfluxDB in a streaming fashion."></a>
-                        <a href="" title="Produces InfluxMeasurement values from InfluxDB in a streaming fashion.">AmpMeasurementSourceFunction</a>
+                        <a class="class" href="InfluxEventGroupSink.html" title=""></a>
+                        <a href="InfluxEventGroupSink.html" title="">InfluxEventGroupSink</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="class" href="AmpRichMeasurementSourceFunction.html" title="Produces RichInfluxMeasurement values from InfluxDB in a streaming fashion."></a>
-                        <a href="AmpRichMeasurementSourceFunction.html" title="Produces RichInfluxMeasurement values from InfluxDB in a streaming fashion.">AmpRichMeasurementSourceFunction</a>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">InfluxEventSink</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="class" href="BigDataSourceFunction.html" title="Produces InfluxMeasurement values from InfluxDB in a streaming fashion."></a>
-                        <a href="BigDataSourceFunction.html" title="Produces InfluxMeasurement values from InfluxDB in a streaming fashion.">BigDataSourceFunction</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="InfluxSourceFunction.html" title="Retrieves new data from InfluxDB as a streaming source function."></a>
-                        <a href="InfluxSourceFunction.html" title="Retrieves new data from InfluxDB as a streaming source function.">InfluxSourceFunction</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="LatencyTSAmpFileInputFormat.html" title="An InputFormat which parses the AMP ICMP results from the Latency TS I dataset."></a>
-                        <a href="LatencyTSAmpFileInputFormat.html" title="An InputFormat which parses the AMP ICMP results from the Latency TS I dataset.">LatencyTSAmpFileInputFormat</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="LatencyTSSmokepingFileInputFormat.html" title="An InputFormat which parses the Smokeping results from the Latency TS I dataset."></a>
-                        <a href="LatencyTSSmokepingFileInputFormat.html" title="An InputFormat which parses the Smokeping results from the Latency TS I dataset.">LatencyTSSmokepingFileInputFormat</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="NabFileInputFormat.html" title="An InputFormat which parses data from the NAB dataset."></a>
-                        <a href="NabFileInputFormat.html" title="An InputFormat which parses data from the NAB dataset.">NabFileInputFormat</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="PollingEsmondSourceFunction.html" title="Outputs data from an Esmond API host."></a>
-                        <a href="PollingEsmondSourceFunction.html" title="Outputs data from an Esmond API host.">PollingEsmondSourceFunction</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="PollingInfluxSourceFunction.html" title="Gets data from InfluxDB in a polling fashion."></a>
-                        <a href="PollingInfluxSourceFunction.html" title="Gets data from InfluxDB in a polling fashion.">PollingInfluxSourceFunction</a>
-                      </li><li class="current-entities indented6">
-                        <a class="object" href="PostgresTracerouteSourceFunction$.html" title="This includes the various filter functions for refreshUsedStreams, which get configured by the filters key subgroup."></a>
-                        <a class="class" href="PostgresTracerouteSourceFunction.html" title="Retrieves new Traceroute measurements from PostgreSQL in a polling fashion."></a>
-                        <a href="PostgresTracerouteSourceFunction.html" title="Retrieves new Traceroute measurements from PostgreSQL in a polling fashion.">PostgresTracerouteSourceFunction</a>
+                        <a class="class" href="InfluxSinkFunction.html" title="A SinkFunction which stores Event objects in InfluxDB."></a>
+                        <a href="InfluxSinkFunction.html" title="A SinkFunction which stores Event objects in InfluxDB.">InfluxSinkFunction</a>
                       </li>
               </ul>
             </div>
@@ -222,9 +192,9 @@ FileInputFormat is specifically for reading files, usually from disk.
             <body class="class type">
       <div id="definition">
         <div class="big-circle class">c</div>
-        <p id="owner"><a href="../../../../../index.html" class="extype" name="nz">nz</a>.<a href="../../../../index.html" class="extype" name="nz.net">net</a>.<a href="../../../index.html" class="extype" name="nz.net.wand">wand</a>.<a href="../../index.html" class="extype" name="nz.net.wand.streamevmon">streamevmon</a>.<a href="../index.html" class="extype" name="nz.net.wand.streamevmon.flink">flink</a>.<a href="index.html" class="extype" name="nz.net.wand.streamevmon.flink.sources">sources</a></p>
-        <h1>AmpMeasurementSourceFunction<span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html" title="Permalink">
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="nz">nz</a>.<a href="../../../../index.html" class="extype" name="nz.net">net</a>.<a href="../../../index.html" class="extype" name="nz.net.wand">wand</a>.<a href="../../index.html" class="extype" name="nz.net.wand.streamevmon">streamevmon</a>.<a href="../index.html" class="extype" name="nz.net.wand.streamevmon.flink">flink</a>.<a href="index.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks">sinks</a></p>
+        <h1>InfluxEventSink<span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -237,25 +207,21 @@ FileInputFormat is specifically for reading files, usually from disk.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">AmpMeasurementSourceFunction</span><span class="result"> extends <a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</span>
+        <span class="name">InfluxEventSink</span><span class="result"> extends <a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Produces <a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>
-values from InfluxDB in a streaming fashion. This source retrieves AMP
-measurements.
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="../../connectors/influx/index.html" class="extype" name="nz.net.wand.streamevmon.connectors.influx">Influx connectors</a> package
-     object for configuration details.</p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>], <a href="../../Logging.html" class="extype" name="nz.net.wand.streamevmon.Logging">Logging</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/checkpoint/CheckpointedFunction.html#org.apache.flink.streaming.api.checkpoint.CheckpointedFunction" class="extype" name="org.apache.flink.streaming.api.checkpoint.CheckpointedFunction">CheckpointedFunction</a>, <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/source/RichSourceFunction.html#org.apache.flink.streaming.api.functions.source.RichSourceFunction" class="extype" name="org.apache.flink.streaming.api.functions.source.RichSourceFunction">RichSourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>], <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/source/SourceFunction.html#org.apache.flink.streaming.api.functions.source.SourceFunction" class="extype" name="org.apache.flink.streaming.api.functions.source.SourceFunction">SourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>], <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/AbstractRichFunction.html#org.apache.flink.api.common.functions.AbstractRichFunction" class="extype" name="org.apache.flink.api.common.functions.AbstractRichFunction">AbstractRichFunction</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/RichFunction.html#org.apache.flink.api.common.functions.RichFunction" class="extype" name="org.apache.flink.api.common.functions.RichFunction">RichFunction</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/Function.html#org.apache.flink.api.common.functions.Function" class="extype" name="org.apache.flink.api.common.functions.Function">Function</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://www.scala-lang.org/api/2.12.13/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>], <a href="../../Logging.html" class="extype" name="nz.net.wand.streamevmon.Logging">Logging</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/checkpoint/CheckpointedFunction.html#org.apache.flink.streaming.api.checkpoint.CheckpointedFunction" class="extype" name="org.apache.flink.streaming.api.checkpoint.CheckpointedFunction">CheckpointedFunction</a>, <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/sink/RichSinkFunction.html#org.apache.flink.streaming.api.functions.sink.RichSinkFunction" class="extype" name="org.apache.flink.streaming.api.functions.sink.RichSinkFunction">RichSinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>], <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/sink/SinkFunction.html#org.apache.flink.streaming.api.functions.sink.SinkFunction" class="extype" name="org.apache.flink.streaming.api.functions.sink.SinkFunction">SinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>], <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/AbstractRichFunction.html#org.apache.flink.api.common.functions.AbstractRichFunction" class="extype" name="org.apache.flink.api.common.functions.AbstractRichFunction">AbstractRichFunction</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/RichFunction.html#org.apache.flink.api.common.functions.RichFunction" class="extype" name="org.apache.flink.api.common.functions.RichFunction">RichFunction</a>, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/Function.html#org.apache.flink.api.common.functions.Function" class="extype" name="org.apache.flink.api.common.functions.Function">Function</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://www.scala-lang.org/api/2.12.13/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 238.00 118.00" height="118pt" width="238pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 234,-114 234,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction (this class)" xlink:href="#inheritance-diagram"><path d="M197.67,-49C197.67,-49 32.33,-49 32.33,-49 28.17,-49 24,-44.83 24,-40.67 24,-40.67 24,-32.33 24,-32.33 24,-28.17 28.17,-24 32.33,-24 32.33,-24 197.67,-24 197.67,-24 201.83,-24 206,-28.17 206,-32.33 206,-32.33 206,-40.67 206,-40.67 206,-44.83 201.83,-49 197.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">AmpMeasurementSourceFunction</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction" xlink:href="InfluxSourceFunction.html#inheritance-diagram"><path d="M214.17,-110C214.17,-110 15.83,-110 15.83,-110 11.67,-110 7.5,-105.83 7.5,-101.67 7.5,-101.67 7.5,-93.33 7.5,-93.33 7.5,-89.17 11.67,-85 15.83,-85 15.83,-85 214.17,-85 214.17,-85 218.33,-85 222.5,-89.17 222.5,-93.33 222.5,-93.33 222.5,-101.67 222.5,-101.67 222.5,-105.83 218.33,-110 214.17,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../../../lib/class_diagram.png" y="-104.5" x="18" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="39" text-anchor="start">InfluxSourceFunction[InfluxMeasurement]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="AmpMeasurementSourceFunction is a subtype of InfluxSourceFunction[InfluxMeasurement]"><path d="M115,-77.76C115,-68.37 115,-57.29 115,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="112.55,-77.84 115,-84.84 117.45,-77.84 112.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 162.00 118.00" height="118pt" width="162pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 158,-114 158,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink (this class)" xlink:href="#inheritance-diagram"><path d="M122.17,-49C122.17,-49 31.83,-49 31.83,-49 27.67,-49 23.5,-44.83 23.5,-40.67 23.5,-40.67 23.5,-32.33 23.5,-32.33 23.5,-28.17 27.67,-24 31.83,-24 31.83,-24 122.17,-24 122.17,-24 126.33,-24 130.5,-28.17 130.5,-32.33 130.5,-32.33 130.5,-40.67 130.5,-40.67 130.5,-44.83 126.33,-49 122.17,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">InfluxEventSink</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction" xlink:href="InfluxSinkFunction.html#inheritance-diagram"><path d="M142.67,-110C142.67,-110 11.33,-110 11.33,-110 7.17,-110 3,-105.83 3,-101.67 3,-101.67 3,-93.33 3,-93.33 3,-89.17 7.17,-85 11.33,-85 11.33,-85 142.67,-85 142.67,-85 146.83,-85 151,-89.17 151,-93.33 151,-93.33 151,-101.67 151,-101.67 151,-105.83 146.83,-110 142.67,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../../../lib/class_diagram.png" y="-104.5" x="13" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="34" text-anchor="start">InfluxSinkFunction[Event]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="InfluxEventSink is a subtype of InfluxSinkFunction[Event]"><path d="M77,-77.76C77,-68.37 77,-57.29 77,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="74.55,-77.84 77,-84.84 79.45,-77.84 74.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -286,7 +252,7 @@ measurements.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction"><span>AmpMeasurementSourceFunction</span></li><li class="in" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction"><span>InfluxSourceFunction</span></li><li class="in" name="nz.net.wand.streamevmon.Logging"><span>Logging</span></li><li class="in" name="org.apache.flink.streaming.api.checkpoint.CheckpointedFunction"><span>CheckpointedFunction</span></li><li class="in" name="nz.net.wand.streamevmon.flink.HasFlinkConfig"><span>HasFlinkConfig</span></li><li class="in" name="org.apache.flink.streaming.api.functions.source.RichSourceFunction"><span>RichSourceFunction</span></li><li class="in" name="org.apache.flink.streaming.api.functions.source.SourceFunction"><span>SourceFunction</span></li><li class="in" name="org.apache.flink.api.common.functions.AbstractRichFunction"><span>AbstractRichFunction</span></li><li class="in" name="org.apache.flink.api.common.functions.RichFunction"><span>RichFunction</span></li><li class="in" name="org.apache.flink.api.common.functions.Function"><span>Function</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink"><span>InfluxEventSink</span></li><li class="in" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction"><span>InfluxSinkFunction</span></li><li class="in" name="nz.net.wand.streamevmon.Logging"><span>Logging</span></li><li class="in" name="org.apache.flink.streaming.api.checkpoint.CheckpointedFunction"><span>CheckpointedFunction</span></li><li class="in" name="nz.net.wand.streamevmon.flink.HasFlinkConfig"><span>HasFlinkConfig</span></li><li class="in" name="org.apache.flink.streaming.api.functions.sink.RichSinkFunction"><span>RichSinkFunction</span></li><li class="in" name="org.apache.flink.streaming.api.functions.sink.SinkFunction"><span>SinkFunction</span></li><li class="in" name="org.apache.flink.api.common.functions.AbstractRichFunction"><span>AbstractRichFunction</span></li><li class="in" name="org.apache.flink.api.common.functions.RichFunction"><span>RichFunction</span></li><li class="in" name="org.apache.flink.api.common.functions.Function"><span>Function</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -306,10 +272,10 @@ measurements.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(fetchHistory:java.time.Duration):nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction"></a><a id="&lt;init&gt;:AmpMeasurementSourceFunction"></a>
+              <ol><li name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():nz.net.wand.streamevmon.flink.sinks.InfluxEventSink"></a><a id="&lt;init&gt;:InfluxEventSink"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#&lt;init&gt;(fetchHistory:java.time.Duration):nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#&lt;init&gt;():nz.net.wand.streamevmon.flink.sinks.InfluxEventSink" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -318,7 +284,7 @@ measurements.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">AmpMeasurementSourceFunction</span><span class="params">(<span name="fetchHistory">fetchHistory: <span class="extype" name="java.time.Duration">Duration</span> = <span class="symbol">Duration.ZERO</span></span>)</span>
+        <span class="name">InfluxEventSink</span><span class="params">()</span>
       </span>
       
       
@@ -335,7 +301,7 @@ measurements.
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -351,7 +317,7 @@ measurements.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html###():Int" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -367,7 +333,7 @@ measurements.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -383,7 +349,7 @@ measurements.
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -396,26 +362,10 @@ measurements.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#cancel" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cancel():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#cancel():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cancel</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Stops the source, allowing the listen loop to finish.</p><div class="fullcomment"><div class="comment cmt"><p>Stops the source, allowing the listen loop to finish.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a> → SourceFunction</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#clone():Object" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -438,10 +388,10 @@ measurements.
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.flink.api.common.functions.AbstractRichFunction#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="close():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#close():Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#close():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -453,17 +403,11 @@ measurements.
         <span class="name">close</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractRichFunction → RichFunction</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Exception]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#configKeyGroup" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Teardown method for RichFunctions.</p><div class="fullcomment"><div class="comment cmt"><p>Teardown method for RichFunctions. Occurs after all calls to <code>invoke()</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → AbstractRichFunction → RichFunction</dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#configKeyGroup" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="configKeyGroup:String"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#configKeyGroup:String" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#configKeyGroup:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -475,11 +419,11 @@ measurements.
         <span class="name">configKeyGroup</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a> → <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
     </li><li name="nz.net.wand.streamevmon.flink.HasFlinkConfig#configWithOverride" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="configWithOverride(context:org.apache.flink.api.common.functions.RuntimeContext):org.apache.flink.api.java.utils.ParameterTool"></a><a id="configWithOverride(RuntimeContext):ParameterTool"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#configWithOverride(context:org.apache.flink.api.common.functions.RuntimeContext):org.apache.flink.api.java.utils.ParameterTool" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#configWithOverride(context:org.apache.flink.api.common.functions.RuntimeContext):org.apache.flink.api.java.utils.ParameterTool" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -495,7 +439,7 @@ measurements.
     </li><li name="nz.net.wand.streamevmon.flink.HasFlinkConfig#configWithOverride" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="configWithOverride(config:org.apache.flink.api.java.utils.ParameterTool):org.apache.flink.api.java.utils.ParameterTool"></a><a id="configWithOverride(ParameterTool):ParameterTool"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#configWithOverride(config:org.apache.flink.api.java.utils.ParameterTool):org.apache.flink.api.java.utils.ParameterTool" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#configWithOverride(config:org.apache.flink.api.java.utils.ParameterTool):org.apache.flink.api.java.utils.ParameterTool" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -511,7 +455,7 @@ measurements.
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -527,7 +471,7 @@ measurements.
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,10 +484,10 @@ measurements.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction#flinkName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#flinkName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="flinkName:String"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#flinkName:String" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#flinkName:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -555,11 +499,11 @@ measurements.
         <span class="name">flinkName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a> → <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction#flinkUid" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#flinkUid" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="flinkUid:String"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#flinkUid:String" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#flinkUid:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -571,11 +515,11 @@ measurements.
         <span class="name">flinkUid</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a> → <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -593,10 +537,26 @@ measurements.
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink#getInfluxWriter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getInfluxWriter(value:nz.net.wand.streamevmon.events.Event):com.github.fsanaulla.chronicler.core.model.InfluxWriter[nz.net.wand.streamevmon.events.Event]"></a><a id="getInfluxWriter(Event):InfluxWriter[Event]"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#getInfluxWriter(value:nz.net.wand.streamevmon.events.Event):com.github.fsanaulla.chronicler.core.model.InfluxWriter[nz.net.wand.streamevmon.events.Event]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInfluxWriter</span><span class="params">(<span name="value">value: <a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a></span>)</span><span class="result">: <span class="extype" name="com.github.fsanaulla.chronicler.core.model.InfluxWriter">InfluxWriter</span>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink">InfluxEventSink</a> → <a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a></dd></dl></div>
     </li><li name="org.apache.flink.api.common.functions.AbstractRichFunction#getIterationRuntimeContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getIterationRuntimeContext():org.apache.flink.api.common.functions.IterationRuntimeContext"></a><a id="getIterationRuntimeContext():IterationRuntimeContext"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#getIterationRuntimeContext():org.apache.flink.api.common.functions.IterationRuntimeContext" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#getIterationRuntimeContext():org.apache.flink.api.common.functions.IterationRuntimeContext" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -612,7 +572,7 @@ measurements.
     </li><li name="nz.net.wand.streamevmon.flink.HasFlinkConfig#getOverrideParams" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOverrideParams:Option[org.apache.flink.api.java.utils.ParameterTool]"></a><a id="getOverrideParams:Option[ParameterTool]"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#getOverrideParams:Option[org.apache.flink.api.java.utils.ParameterTool]" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#getOverrideParams:Option[org.apache.flink.api.java.utils.ParameterTool]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -628,7 +588,7 @@ measurements.
     </li><li name="org.apache.flink.api.common.functions.AbstractRichFunction#getRuntimeContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getRuntimeContext():org.apache.flink.api.common.functions.RuntimeContext"></a><a id="getRuntimeContext():RuntimeContext"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#getRuntimeContext():org.apache.flink.api.common.functions.RuntimeContext" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#getRuntimeContext():org.apache.flink.api.common.functions.RuntimeContext" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -644,7 +604,7 @@ measurements.
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -662,42 +622,10 @@ measurements.
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#influxConnection" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="influxConnection:Option[nz.net.wand.streamevmon.connectors.influx.InfluxConnection]"></a><a id="influxConnection:Option[InfluxConnection]"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#influxConnection:Option[nz.net.wand.streamevmon.connectors.influx.InfluxConnection]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">influxConnection</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../connectors/influx/InfluxConnection.html" class="extype" name="nz.net.wand.streamevmon.connectors.influx.InfluxConnection">InfluxConnection</a>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#influxHistory" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="influxHistory:Option[nz.net.wand.streamevmon.connectors.influx.InfluxHistoryConnection]"></a><a id="influxHistory:Option[InfluxHistoryConnection]"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#influxHistory:Option[nz.net.wand.streamevmon.connectors.influx.InfluxHistoryConnection]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">influxHistory</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../connectors/influx/InfluxHistoryConnection.html" class="extype" name="nz.net.wand.streamevmon.connectors.influx.InfluxHistoryConnection">InfluxHistoryConnection</a>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#initializeState" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#initializeState" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="initializeState(context:org.apache.flink.runtime.state.FunctionInitializationContext):Unit"></a><a id="initializeState(FunctionInitializationContext):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#initializeState(context:org.apache.flink.runtime.state.FunctionInitializationContext):Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#initializeState(context:org.apache.flink.runtime.state.FunctionInitializationContext):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -709,11 +637,28 @@ measurements.
         <span class="name">initializeState</span><span class="params">(<span name="context">context: <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/runtime/state/FunctionInitializationContext.html#org.apache.flink.runtime.state.FunctionInitializationContext" class="extype" name="org.apache.flink.runtime.state.FunctionInitializationContext">FunctionInitializationContext</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a> → CheckpointedFunction</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → CheckpointedFunction</dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#invoke" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="invoke(value:T,context:org.apache.flink.streaming.api.functions.sink.SinkFunction.Context):Unit"></a><a id="invoke(Event,Context):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#invoke(value:T,context:org.apache.flink.streaming.api.functions.sink.SinkFunction.Context):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">invoke</span><span class="params">(<span name="value">value: <a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a></span>, <span name="context">context: <span class="extype" name="org.apache.flink.streaming.api.functions.sink.SinkFunction.Context">Context</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Called when new data arrives to the sink, and passes it to InfluxDB.</p><div class="fullcomment"><div class="comment cmt"><p>Called when new data arrives to the sink, and passes it to InfluxDB.
+</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The data to send to InfluxDB.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → SinkFunction</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -726,76 +671,10 @@ measurements.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#isRunning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isRunning:Boolean"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#isRunning:Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isRunning</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#lastMeasurementTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="lastMeasurementTime:java.time.Instant"></a><a id="lastMeasurementTime:Instant"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#lastMeasurementTime:java.time.Instant" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lastMeasurementTime</span><span class="result">: <span class="extype" name="java.time.Instant">Instant</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#listen" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="listen(ctx:org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext[T]):Unit"></a><a id="listen(SourceContext[InfluxMeasurement]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#listen(ctx:org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext[T]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">listen</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext">SourceContext</span>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Listens for new events.</p><div class="fullcomment"><div class="comment cmt"><p>Listens for new events. Calls <a href="InfluxSourceFunction.html#processLine(line:String):Option[T]" class="extmbr" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#processLine">processLine</a> once per data line gathered.</p><p>Currently only tested with an HTTP subscription. UDP is unlikely to work,
-but HTTPS might.
-</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>The SourceContext associated with the current execution.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#listener" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="listener:Option[java.net.ServerSocket]"></a><a id="listener:Option[ServerSocket]"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#listener:Option[java.net.ServerSocket]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">listener</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.net.ServerSocket">ServerSocket</span>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
     </li><li name="nz.net.wand.streamevmon.Logging#logger" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logger:org.slf4j.Logger"></a><a id="logger:Logger"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#logger:org.slf4j.Logger" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#logger:org.slf4j.Logger" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -811,26 +690,26 @@ but HTTPS might.
                 <span class="name">@transient</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#maxLateness" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="maxLateness:Long"></a>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink#measurementName" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="measurementName(value:nz.net.wand.streamevmon.events.Event):String"></a><a id="measurementName(Event):String"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#maxLateness:Long" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#measurementName(value:nz.net.wand.streamevmon.events.Event):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">var</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">maxLateness</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>
+        <span class="name">measurementName</span><span class="params">(<span name="value">value: <a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink">InfluxEventSink</a> → <a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -846,7 +725,7 @@ but HTTPS might.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#notify():Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -867,7 +746,7 @@ but HTTPS might.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -885,10 +764,10 @@ but HTTPS might.
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.flink.api.common.functions.AbstractRichFunction#open" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="open(x$1:org.apache.flink.configuration.Configuration):Unit"></a><a id="open(Configuration):Unit"></a>
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#open" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="open(parameters:org.apache.flink.configuration.Configuration):Unit"></a><a id="open(Configuration):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#open(x$1:org.apache.flink.configuration.Configuration):Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#open(parameters:org.apache.flink.configuration.Configuration):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -897,20 +776,15 @@ but HTTPS might.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">open</span><span class="params">(<span name="arg0">arg0: <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/configuration/Configuration.html#org.apache.flink.configuration.Configuration" class="extype" name="org.apache.flink.configuration.Configuration">Configuration</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">open</span><span class="params">(<span name="parameters">parameters: <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/configuration/Configuration.html#org.apache.flink.configuration.Configuration" class="extype" name="org.apache.flink.configuration.Configuration">Configuration</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractRichFunction → RichFunction</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Exception]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
+      <p class="shortcomment cmt">Initialisation method for RichFunctions.</p><div class="fullcomment"><div class="comment cmt"><p>Initialisation method for RichFunctions. Occurs before any calls to <code>invoke()</code>.
+</p></div><dl class="paramcmts block"><dt class="param">parameters</dt><dd class="cmt"><p>Ignored.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → AbstractRichFunction → RichFunction</dd></dl></div>
     </li><li name="nz.net.wand.streamevmon.flink.HasFlinkConfig#overrideConfig" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="overrideConfig(config:org.apache.flink.api.java.utils.ParameterTool):HasFlinkConfig.this.type"></a><a id="overrideConfig(ParameterTool):AmpMeasurementSourceFunction.this.type"></a>
+      <a id="overrideConfig(config:org.apache.flink.api.java.utils.ParameterTool):HasFlinkConfig.this.type"></a><a id="overrideConfig(ParameterTool):InfluxEventSink.this.type"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#overrideConfig(config:org.apache.flink.api.java.utils.ParameterTool):HasFlinkConfig.this.type" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#overrideConfig(config:org.apache.flink.api.java.utils.ParameterTool):HasFlinkConfig.this.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -919,14 +793,14 @@ but HTTPS might.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">overrideConfig</span><span class="params">(<span name="config">config: <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/java/utils/ParameterTool.html#org.apache.flink.api.java.utils.ParameterTool" class="extype" name="org.apache.flink.api.java.utils.ParameterTool">ParameterTool</a></span>)</span><span class="result">: <a href="" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a>.this.type</span>
+        <span class="name">overrideConfig</span><span class="params">(<span name="config">config: <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/java/utils/ParameterTool.html#org.apache.flink.api.java.utils.ParameterTool" class="extype" name="org.apache.flink.api.java.utils.ParameterTool">ParameterTool</a></span>)</span><span class="result">: <a href="" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink">InfluxEventSink</a>.this.type</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
     </li><li name="nz.net.wand.streamevmon.flink.HasFlinkConfig#overrideConfig" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="overrideConfig(config:Map[String,String],addPrefix:String):HasFlinkConfig.this.type"></a><a id="overrideConfig(Map[String,String],String):AmpMeasurementSourceFunction.this.type"></a>
+      <a id="overrideConfig(config:Map[String,String],addPrefix:String):HasFlinkConfig.this.type"></a><a id="overrideConfig(Map[String,String],String):InfluxEventSink.this.type"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#overrideConfig(config:Map[String,String],addPrefix:String):HasFlinkConfig.this.type" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#overrideConfig(config:Map[String,String],addPrefix:String):HasFlinkConfig.this.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -935,14 +809,14 @@ but HTTPS might.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">overrideConfig</span><span class="params">(<span name="config">config: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="addPrefix">addPrefix: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <a href="" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a>.this.type</span>
+        <span class="name">overrideConfig</span><span class="params">(<span name="config">config: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="addPrefix">addPrefix: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <a href="" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxEventSink">InfluxEventSink</a>.this.type</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
     </li><li name="nz.net.wand.streamevmon.flink.HasFlinkConfig#overrideParams" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="overrideParams:Option[org.apache.flink.api.java.utils.ParameterTool]"></a><a id="overrideParams:Option[ParameterTool]"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#overrideParams:Option[org.apache.flink.api.java.utils.ParameterTool]" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#overrideParams:Option[org.apache.flink.api.java.utils.ParameterTool]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -955,65 +829,10 @@ but HTTPS might.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction#processHistoricalMeasurement" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="processHistoricalMeasurement(measurement:nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement):Option[nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement]"></a><a id="processHistoricalMeasurement(InfluxMeasurement):Option[InfluxMeasurement]"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#processHistoricalMeasurement(measurement:nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement):Option[nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">processHistoricalMeasurement</span><span class="params">(<span name="measurement">measurement: <a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Overriding this function allows implementing classes to perform additional
-processing on historical data received in Measurement format.</p><div class="fullcomment"><div class="comment cmt"><p>Overriding this function allows implementing classes to perform additional
-processing on historical data received in Measurement format.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The measurement as the more specific type T, or None if conversion
-        failed.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a> → <a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction#processLine" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="processLine(line:String):Option[nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement]"></a><a id="processLine(String):Option[InfluxMeasurement]"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#processLine(line:String):Option[nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">processLine</span><span class="params">(<span name="line">line: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Transforms a single line received from InfluxDB in Line Protocol format
-into an object of type T.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms a single line received from InfluxDB in Line Protocol format
-into an object of type T.
-</p></div><dl class="paramcmts block"><dt class="param">line</dt><dd class="cmt"><p>The line received.</p></dd><dt>returns</dt><dd class="cmt"><p>The object representing the data received.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a> → <a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run(ctx:org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext[T]):Unit"></a><a id="run(SourceContext[InfluxMeasurement]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#run(ctx:org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext[T]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext">SourceContext</span>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Starts the source, setting up the listen server.</p><div class="fullcomment"><div class="comment cmt"><p>Starts the source, setting up the listen server.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a> → SourceFunction</dd></dl></div>
     </li><li name="org.apache.flink.api.common.functions.AbstractRichFunction#setRuntimeContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setRuntimeContext(x$1:org.apache.flink.api.common.functions.RuntimeContext):Unit"></a><a id="setRuntimeContext(RuntimeContext):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#setRuntimeContext(x$1:org.apache.flink.api.common.functions.RuntimeContext):Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#setRuntimeContext(x$1:org.apache.flink.api.common.functions.RuntimeContext):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1026,10 +845,10 @@ into an object of type T.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractRichFunction → RichFunction</dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#snapshotState" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction#snapshotState" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="snapshotState(context:org.apache.flink.runtime.state.FunctionSnapshotContext):Unit"></a><a id="snapshotState(FunctionSnapshotContext):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#snapshotState(context:org.apache.flink.runtime.state.FunctionSnapshotContext):Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#snapshotState(context:org.apache.flink.runtime.state.FunctionSnapshotContext):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1041,43 +860,11 @@ into an object of type T.
         <span class="name">snapshotState</span><span class="params">(<span name="context">context: <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/runtime/state/FunctionSnapshotContext.html#org.apache.flink.runtime.state.FunctionSnapshotContext" class="extype" name="org.apache.flink.runtime.state.FunctionSnapshotContext">FunctionSnapshotContext</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a> → CheckpointedFunction</dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#startListener" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="startListener():Boolean"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#startListener():Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">startListener</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction#stopListener" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="stopListener():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#stopListener():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stopListener</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a> → CheckpointedFunction</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1093,7 +880,7 @@ into an object of type T.
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#toString():String" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1109,7 +896,7 @@ into an object of type T.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1131,7 +918,7 @@ into an object of type T.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1155,7 +942,7 @@ into an object of type T.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#wait():Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1185,7 +972,7 @@ into an object of type T.
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/flink/sources/AmpMeasurementSourceFunction.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1206,23 +993,47 @@ into an object of type T.
                 <span class="name">@Deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li><li name="org.apache.flink.streaming.api.functions.sink.SinkFunction#invoke" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="invoke(x$1:IN):Unit"></a><a id="invoke(Event):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/flink/sinks/InfluxEventSink.html#invoke(x$1:IN):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">invoke</span><span class="params">(<span name="arg0">arg0: <a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SinkFunction</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
     </li></ol>
             </div>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">
-              <h3>Inherited from <a href="InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</h3>
+        <div class="parent" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">
+              <h3>Inherited from <a href="InfluxSinkFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sinks.InfluxSinkFunction">InfluxSinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</h3>
             </div><div class="parent" name="nz.net.wand.streamevmon.Logging">
               <h3>Inherited from <a href="../../Logging.html" class="extype" name="nz.net.wand.streamevmon.Logging">Logging</a></h3>
             </div><div class="parent" name="org.apache.flink.streaming.api.checkpoint.CheckpointedFunction">
               <h3>Inherited from <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/checkpoint/CheckpointedFunction.html#org.apache.flink.streaming.api.checkpoint.CheckpointedFunction" class="extype" name="org.apache.flink.streaming.api.checkpoint.CheckpointedFunction">CheckpointedFunction</a></h3>
             </div><div class="parent" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">
               <h3>Inherited from <a href="../HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></h3>
-            </div><div class="parent" name="org.apache.flink.streaming.api.functions.source.RichSourceFunction">
-              <h3>Inherited from <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/source/RichSourceFunction.html#org.apache.flink.streaming.api.functions.source.RichSourceFunction" class="extype" name="org.apache.flink.streaming.api.functions.source.RichSourceFunction">RichSourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</h3>
-            </div><div class="parent" name="org.apache.flink.streaming.api.functions.source.SourceFunction">
-              <h3>Inherited from <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/source/SourceFunction.html#org.apache.flink.streaming.api.functions.source.SourceFunction" class="extype" name="org.apache.flink.streaming.api.functions.source.SourceFunction">SourceFunction</a>[<a href="../../measurements/traits/InfluxMeasurement.html" class="extype" name="nz.net.wand.streamevmon.measurements.traits.InfluxMeasurement">InfluxMeasurement</a>]</h3>
+            </div><div class="parent" name="org.apache.flink.streaming.api.functions.sink.RichSinkFunction">
+              <h3>Inherited from <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/sink/RichSinkFunction.html#org.apache.flink.streaming.api.functions.sink.RichSinkFunction" class="extype" name="org.apache.flink.streaming.api.functions.sink.RichSinkFunction">RichSinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</h3>
+            </div><div class="parent" name="org.apache.flink.streaming.api.functions.sink.SinkFunction">
+              <h3>Inherited from <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/streaming/api/functions/sink/SinkFunction.html#org.apache.flink.streaming.api.functions.sink.SinkFunction" class="extype" name="org.apache.flink.streaming.api.functions.sink.SinkFunction">SinkFunction</a>[<a href="../../events/Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</h3>
             </div><div class="parent" name="org.apache.flink.api.common.functions.AbstractRichFunction">
               <h3>Inherited from <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/api/java/org/apache/flink/api/common/functions/AbstractRichFunction.html#org.apache.flink.api.common.functions.AbstractRichFunction" class="extype" name="org.apache.flink.api.common.functions.AbstractRichFunction">AbstractRichFunction</a></h3>
             </div><div class="parent" name="org.apache.flink.api.common.functions.RichFunction">
