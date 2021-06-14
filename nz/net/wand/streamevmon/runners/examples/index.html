@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>streamevmon v0.1.0 - nz.net.wand.streamevmon.runners.examples</title>
-          <meta name="description" content="streamevmon v0.1.0 - nz.net.wand.streamevmon.runners.examples" />
-          <meta name="keywords" content="streamevmon v0.1.0 nz.net.wand.streamevmon.runners.examples" />
+          <title>streamevmon v0.3.0-RC1 - nz.net.wand.streamevmon.runners.examples</title>
+          <meta name="description" content="streamevmon v0.3.0 - RC1 - nz.net.wand.streamevmon.runners.examples" />
+          <meta name="keywords" content="streamevmon v0.3.0 RC1 nz.net.wand.streamevmon.runners.examples" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">streamevmon<span id="doc-version">v0.1.0</span></span>
+        <span id="doc-title">streamevmon<span id="doc-version">v0.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -198,6 +198,10 @@ certain interesting things. This might include using a source in a
 particular way, or effectively using checkpointing.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="nz.net.wand.streamevmon.runners">runners</a></dd></dl></div>
     </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="Amp2SourcePrinter$.html" title=""></a>
+                        <a href="Amp2SourcePrinter$.html" title="">Amp2SourcePrinter</a>
+                      </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="object" href="AmpMeasurementsToCsv$.html" title="Shows saving measurements that implement CsvOutputable to a file using the StreamingFileSink."></a>
                         <a href="AmpMeasurementsToCsv$.html" title="Shows saving measurements that implement CsvOutputable to a file using the StreamingFileSink.">AmpMeasurementsToCsv</a>
@@ -373,7 +377,23 @@ particular way, or effectively using checkpointing.
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="nz.net.wand.streamevmon.runners.examples.AmpMeasurementsToCsv" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                <li name="nz.net.wand.streamevmon.runners.examples.Amp2SourcePrinter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Amp2SourcePrinter"></a><a id="Amp2SourcePrinter:Amp2SourcePrinter"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/runners/examples/Amp2SourcePrinter$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Amp2SourcePrinter$.html"><span class="name">Amp2SourcePrinter</span></a>
+      </span>
+      
+      
+    </li><li name="nz.net.wand.streamevmon.runners.examples.AmpMeasurementsToCsv" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="AmpMeasurementsToCsv"></a><a id="AmpMeasurementsToCsv:AmpMeasurementsToCsv"></a>
       <span class="permalink">
       <a href="../../../../../../nz/net/wand/streamevmon/runners/examples/AmpMeasurementsToCsv$.html" title="Permalink">
@@ -471,8 +491,8 @@ of the tools and some manipulation of the results.
         <a title="Most basic example of using an InfluxSourceFunction, in this case an AmpMeasurementSourceFunction." href="InfluxSourceReceiver$.html"><span class="name">InfluxSourceReceiver</span></a>
       </span>
       
-      <p class="shortcomment cmt">Most basic example of using an <a href="../../flink/sources/InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a>,
-in this case an <a href="../../flink/sources/AmpMeasurementSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Most basic example of using an <a href="../../flink/sources/InfluxSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxSourceFunction">InfluxSourceFunction</a>,
+      <p class="shortcomment cmt">Most basic example of using an <a href="../../flink/sources/InfluxAmpSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxAmpSourceFunction">InfluxSourceFunction</a>,
+in this case an <a href="../../flink/sources/AmpMeasurementSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Most basic example of using an <a href="../../flink/sources/InfluxAmpSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.InfluxAmpSourceFunction">InfluxSourceFunction</a>,
 in this case an <a href="../../flink/sources/AmpMeasurementSourceFunction.html" class="extype" name="nz.net.wand.streamevmon.flink.sources.AmpMeasurementSourceFunction">AmpMeasurementSourceFunction</a>.</p><p>Requires <code>source.influx.(amp.)?serverName</code> to be set.</p><p>This just prints the type of measurement that was received and its time.
 </p></div></div>
     </li><li name="nz.net.wand.streamevmon.runners.examples.LatencyTSAllDetectors" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
