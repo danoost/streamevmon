@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>streamevmon v0.3.0-RC1 - nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper</title>
-          <meta name="description" content="streamevmon v0.3.0 - RC1 - nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper" />
-          <meta name="keywords" content="streamevmon v0.3.0 RC1 nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper" />
+          <title>streamevmon v0.3.0-RC3 - nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper</title>
+          <meta name="description" content="streamevmon v0.3.0 - RC3 - nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper" />
+          <meta name="keywords" content="streamevmon v0.3.0 RC3 nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">streamevmon<span id="doc-version">v0.3.0-RC1</span></span>
+        <span id="doc-title">streamevmon<span id="doc-version">v0.3.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -222,6 +222,8 @@ other in time. The start time of a group is the earliest received eventTime.
 The end time is the largest eventTime in the group. Groups will only be
 merged if they have the same Flink key. This will usually be the stream ID.</p><h4>Configuration</h4><p>This class is configured by the <code>eventGrouping.time</code> configuration key group.</p><p>- <code>maximumEventInterval</code>: The maximum time, in seconds, between two events
 before a new group is started. Default 10.
+- <code>maximumGroupDuration</code>: The maximum time, in seconds, that an event group
+can span. Default 7200 (2 hours).
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -538,6 +540,38 @@ before a new group is started. Default 10.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../flink/HasFlinkConfig.html" class="extype" name="nz.net.wand.streamevmon.flink.HasFlinkConfig">HasFlinkConfig</a></dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper#createTimers" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createTimers(value:nz.net.wand.streamevmon.events.grouping.EventGroup,ctx:org.apache.flink.streaming.api.functions.KeyedProcessFunction[String,nz.net.wand.streamevmon.events.grouping.EventGroup,nz.net.wand.streamevmon.events.grouping.EventGroup]#Context):Unit"></a><a id="createTimers(EventGroup,Context):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../nz/net/wand/streamevmon/events/grouping/time/TemporalEventGrouper.html#createTimers(value:nz.net.wand.streamevmon.events.grouping.EventGroup,ctx:org.apache.flink.streaming.api.functions.KeyedProcessFunction[String,nz.net.wand.streamevmon.events.grouping.EventGroup,nz.net.wand.streamevmon.events.grouping.EventGroup]#Context):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createTimers</span><span class="params">(<span name="value">value: <a href="../EventGroup.html" class="extype" name="nz.net.wand.streamevmon.events.grouping.EventGroup">EventGroup</a></span>, <span name="ctx">ctx: <span class="extype" name="org.apache.flink.streaming.api.functions.KeyedProcessFunction.Context">Context</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      
+    </li><li name="nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper#deleteTimers" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deleteTimers(value:nz.net.wand.streamevmon.events.grouping.EventGroup,ctx:org.apache.flink.streaming.api.functions.KeyedProcessFunction[String,nz.net.wand.streamevmon.events.grouping.EventGroup,nz.net.wand.streamevmon.events.grouping.EventGroup]#Context):Unit"></a><a id="deleteTimers(EventGroup,Context):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../nz/net/wand/streamevmon/events/grouping/time/TemporalEventGrouper.html#deleteTimers(value:nz.net.wand.streamevmon.events.grouping.EventGroup,ctx:org.apache.flink.streaming.api.functions.KeyedProcessFunction[String,nz.net.wand.streamevmon.events.grouping.EventGroup,nz.net.wand.streamevmon.events.grouping.EventGroup]#Context):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteTimers</span><span class="params">(<span name="value">value: <a href="../EventGroup.html" class="extype" name="nz.net.wand.streamevmon.events.grouping.EventGroup">EventGroup</a></span>, <span name="ctx">ctx: <span class="extype" name="org.apache.flink.streaming.api.functions.KeyedProcessFunction.Context">Context</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -740,6 +774,25 @@ before a new group is started. Default 10.
       </span>
       
       <p class="shortcomment cmt">The maximum time between events in a single group</p><div class="fullcomment"><div class="comment cmt"><p>The maximum time between events in a single group</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@transient</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.events.grouping.time.TemporalEventGrouper#maximumGroupDuration" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maximumGroupDuration:java.time.Duration"></a><a id="maximumGroupDuration:Duration"></a>
+      <span class="permalink">
+      <a href="../../../../../../../nz/net/wand/streamevmon/events/grouping/time/TemporalEventGrouper.html#maximumGroupDuration:java.time.Duration" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maximumGroupDuration</span><span class="result">: <span class="extype" name="java.time.Duration">Duration</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@transient</span><span class="args">()</span>
               
         </dd></dl></div>

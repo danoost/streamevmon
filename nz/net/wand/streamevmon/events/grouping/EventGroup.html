@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>streamevmon v0.3.0-RC1 - nz.net.wand.streamevmon.events.grouping.EventGroup</title>
-          <meta name="description" content="streamevmon v0.3.0 - RC1 - nz.net.wand.streamevmon.events.grouping.EventGroup" />
-          <meta name="keywords" content="streamevmon v0.3.0 RC1 nz.net.wand.streamevmon.events.grouping.EventGroup" />
+          <title>streamevmon v0.3.0-RC3 - nz.net.wand.streamevmon.events.grouping.EventGroup</title>
+          <meta name="description" content="streamevmon v0.3.0 - RC3 - nz.net.wand.streamevmon.events.grouping.EventGroup" />
+          <meta name="keywords" content="streamevmon v0.3.0 RC3 nz.net.wand.streamevmon.events.grouping.EventGroup" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">streamevmon<span id="doc-version">v0.3.0-RC1</span></span>
+        <span id="doc-title">streamevmon<span id="doc-version">v0.3.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -244,7 +244,7 @@ for an entry point.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">EventGroup</span><span class="params">(<span name="startTime">startTime: <span class="extype" name="java.time.Instant">Instant</span></span>, <span name="endTime">endTime: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.time.Instant">Instant</span>]</span>, <span name="events">events: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.13/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.13/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">EventGroup</span><span class="params">(<span name="startTime">startTime: <span class="extype" name="java.time.Instant">Instant</span></span>, <span name="endTime">endTime: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.time.Instant">Instant</span>]</span>, <span name="memberEvents">memberEvents: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>, <span name="uuid">uuid: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.util.UUID">UUID</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.13/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.13/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
@@ -310,9 +310,9 @@ for an entry point.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(startTime:java.time.Instant,endTime:Option[java.time.Instant],events:Iterable[nz.net.wand.streamevmon.events.Event]):nz.net.wand.streamevmon.events.grouping.EventGroup"></a><a id="&lt;init&gt;:EventGroup"></a>
+      <a id="&lt;init&gt;(startTime:java.time.Instant,endTime:Option[java.time.Instant],memberEvents:Iterable[nz.net.wand.streamevmon.events.Event],uuid:Option[java.util.UUID]):nz.net.wand.streamevmon.events.grouping.EventGroup"></a><a id="&lt;init&gt;:EventGroup"></a>
       <span class="permalink">
-      <a href="../../../../../../nz/net/wand/streamevmon/events/grouping/EventGroup.html#&lt;init&gt;(startTime:java.time.Instant,endTime:Option[java.time.Instant],events:Iterable[nz.net.wand.streamevmon.events.Event]):nz.net.wand.streamevmon.events.grouping.EventGroup" title="Permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/events/grouping/EventGroup.html#&lt;init&gt;(startTime:java.time.Instant,endTime:Option[java.time.Instant],memberEvents:Iterable[nz.net.wand.streamevmon.events.Event],uuid:Option[java.util.UUID]):nz.net.wand.streamevmon.events.grouping.EventGroup" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -321,7 +321,7 @@ for an entry point.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">EventGroup</span><span class="params">(<span name="startTime">startTime: <span class="extype" name="java.time.Instant">Instant</span></span>, <span name="endTime">endTime: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.time.Instant">Instant</span>]</span>, <span name="events">events: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>)</span>
+        <span class="name">EventGroup</span><span class="params">(<span name="startTime">startTime: <span class="extype" name="java.time.Instant">Instant</span></span>, <span name="endTime">endTime: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.time.Instant">Instant</span>]</span>, <span name="memberEvents">memberEvents: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>, <span name="uuid">uuid: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.util.UUID">UUID</span>] = <span class="symbol">None</span></span>)</span>
       </span>
       
       
@@ -425,6 +425,22 @@ for an entry point.
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#description" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="description:String"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/events/grouping/EventGroup.html#description:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">description</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      
     </li><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#endTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="endTime:Option[java.time.Instant]"></a><a id="endTime:Option[Instant]"></a>
       <span class="permalink">
@@ -457,7 +473,7 @@ for an entry point.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#events" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#events" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="events:Iterable[nz.net.wand.streamevmon.events.Event]"></a><a id="events:Iterable[Event]"></a>
       <span class="permalink">
       <a href="../../../../../../nz/net/wand/streamevmon/events/grouping/EventGroup.html#events:Iterable[nz.net.wand.streamevmon.events.Event]" title="Permalink">
@@ -466,13 +482,16 @@ for an entry point.
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">events</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../Event.html" class="extype" name="nz.net.wand.streamevmon.events.Event">Event</a>]</span>
       </span>
       
-      
+      <p class="shortcomment cmt">The underlying group of events is private.</p><div class="fullcomment"><div class="comment cmt"><p>The underlying group of events is private. We instead expose a new group
+where each event has an additional tag <code>in_group</code> which declares group
+membership. This is mainly used to write membership-rich events to InfluxDB.</p><p>If no UUID is defined, this just passes the events with no group.
+</p></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -680,6 +699,22 @@ for an entry point.
       </span>
       
       
+    </li><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#uuid" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="uuid:Option[java.util.UUID]"></a><a id="uuid:Option[UUID]"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/events/grouping/EventGroup.html#uuid:Option[java.util.UUID]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">uuid</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.util.UUID">UUID</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -748,6 +783,24 @@ for an entry point.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="nz.net.wand.streamevmon.events.grouping.EventGroup#withUuid" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withUuid(id:Option[java.util.UUID]):nz.net.wand.streamevmon.events.grouping.EventGroup"></a><a id="withUuid(Option[UUID]):EventGroup"></a>
+      <span class="permalink">
+      <a href="../../../../../../nz/net/wand/streamevmon/events/grouping/EventGroup.html#withUuid(id:Option[java.util.UUID]):nz.net.wand.streamevmon.events.grouping.EventGroup" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withUuid</span><span class="params">(<span name="id">id: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.util.UUID">UUID</span>] = <span class="symbol">None</span></span>)</span><span class="result">: <a href="" class="extype" name="nz.net.wand.streamevmon.events.grouping.EventGroup">EventGroup</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns a new EventGroup with a fresh UUID.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new EventGroup with a fresh UUID. Applies the supplied UUID, or
+generates a new one by default.
+</p></div></div>
     </li>
               </ol>
             </div>
